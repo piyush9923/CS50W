@@ -1,0 +1,25 @@
+.wrapper {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 200px;
+    }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 40%;
+    }
+
+input {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px 0;
+    box-sizing: border-box;
+    height: 40px;
+    }
