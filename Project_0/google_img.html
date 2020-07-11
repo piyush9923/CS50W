@@ -2,12 +2,39 @@
 <html lang="en">
     <head>
         <title>Search</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <style>
+            .wrapper {
+              text-align: center;
+              margin-top: 250px;
+            }
+
+         </style>
     </head>
     <body>
-        <form action="https://images.google.com/search"  method="GET">
-            <input type="hidden" name="tbm" value="isch" />
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="google_img.html">
+                      Images
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="adv_search.html">
+                      Advance
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+            <img src="google_img.jpg" alt="Google" height="2">
+            <form action="https://images.google.com/search"  method="GET">
+                <input type="hidden" name="tbm" value="isch" />
+                <br><input type="text" name="q"></br>
+                <br><input type="submit" value="Google Search"></br>
+            </form>
+        </div>
     </body>
 </html>
