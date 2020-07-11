@@ -3,35 +3,66 @@
     <head>
         <title>Advance Search</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
         <style>
             .wrapper {
-              text-align: center;
-              margin-top: 250px;
+                margin: 15px;
+                margin-top: 30px
+            }
+            td {
+                padding: 10px;
             }
 
-         </style>
+            input {
+                padding-left: 10px;
+            }
+        </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-sm bg-light">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                      Home
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="main" >
+            <nav class="navbar navbar-expand-sm bg-light">
+                <img src="google.png" alt="Google" height="40" align="left">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                          Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="google_img.html">
+                          Images
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-        <div class="wrapper">
-            <img src="google.png" alt="Google">
-            <form action="https://google.com/search">
-                <input type="text" value="all these words" name="as_q">
-                <input type="text" value="this exact word or phrase" name="as_epq">
-                <input type="text" value="any of these words" name="as_oq">
-                <input type="text" value="none of these words" name="as_eq">
-                <input type="submit" value="Google Advance Search">
-            </form>
+            <div class="wrapper">
+                <form action="https://google.com/search">
+                    <table>
+                        <tr>
+                            <td>all these words:</td>
+                            <td><input type="text" name="as_q"></td>
+                        </tr>
+
+                        <tr>
+                            <td>this exact word or phrase:</td>
+                            <td><input type="text" name="as_epq"></td>
+                        </tr>
+
+                        <tr>
+                            <td>any of these words:</td>
+                            <td><input type="text" name="as_oq"></td>
+                        </tr>
+
+                        <tr>
+                            <td>none of these words:</td>
+                            <td><input type="text" name="as_eq"></td>
+                        </tr>
+                    </table>
+                    <br><input type="submit" value="Advance Search"></br>
+                </form>
+            </div>
+
+
         </div>
     </body>
 </html>
