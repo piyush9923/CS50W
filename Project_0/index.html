@@ -3,14 +3,8 @@
     <head>
         <title>Search</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
 
-        <style>
-            .wrapper {
-              text-align: center;
-              margin-top: 250px;
-            }
-
-         </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-sm bg-light">
@@ -22,7 +16,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="adv_search.html">
-                      Advance
+                      Advance Search
                     </a>
                 </li>
             </ul>
@@ -31,8 +25,11 @@
         <div class="wrapper">
             <img src="google.png" alt="Google">
             <form action="https://google.com/search">
-                <br><input type="text" name="q"></br>
-                <br><input type="submit" value="Google Search"></br>
+                <br><input type="text" name="q" id="round_field"></br>
+                <br>
+                    <input type="submit" value="Google Search">
+                    <input type="submit" value="I'm Feeling Lucky" name="btnI" style="margin-left:20px">
+                </br>
             </form>
         </div>
     </body>

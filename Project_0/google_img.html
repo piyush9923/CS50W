@@ -3,12 +3,7 @@
     <head>
         <title>Search</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-        <style>
-            .wrapper {
-              text-align: center;
-              margin-top: 250px;
-            }
+        <link rel="stylesheet" href="style.css">
 
          </style>
     </head>
@@ -16,25 +11,21 @@
         <nav class="navbar navbar-expand-sm bg-light">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="google_img.html">
-                      Images
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="adv_search.html">
-                      Advance
+                    <a class="nav-link" href="index.html">
+                      Home
                     </a>
                 </li>
             </ul>
         </nav>
 
         <div class="wrapper">
-            <img src="google_img.jpg" alt="Google" height="2">
+            <img src="google_img.jpg" alt="Google" width="250px">
             <form action="https://images.google.com/search"  method="GET">
-                <input type="hidden" name="tbm" value="isch" />
-                <br><input type="text" name="q"></br>
-                <br><input type="submit" value="Google Search"></br>
+                <input type="hidden" name="tbm" value="isch">
+                <br><input type="text" name="q" id="round_field"></br>
+                <br><input type="submit" value="Image Search"></br>
             </form>
         </div>
     </body>
 </html>
+
