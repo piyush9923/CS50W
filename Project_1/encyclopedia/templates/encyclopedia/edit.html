@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+
+
+
+    <form action="{% url 'wikipedia:edit' title %}" method="POST">
+        {% csrf_token %}
+        <label for="label">Title: </label>
+        <input type="text" value={{title}} id="label">
+        <br></br>
+
+        <label for="content">Content:</label>
+
+        <textarea id="content" rows="4" cols="50" style='height: 250px;' name="body">
+            {{ body }}
+        </textarea>
+
+        <input type="submit" value="save">
+    </form>
+{% endblock %}96u42w2
