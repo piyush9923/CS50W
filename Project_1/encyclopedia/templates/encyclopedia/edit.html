@@ -5,21 +5,30 @@
 {% endblock %}
 
 {% block body %}
-
-
-
-    <form action="{% url 'wikipedia:edit' title %}" method="POST">
+     <h1>Edit Page</h1>
+    <form action="{% url 'wikipedia:edit' title %}" method="post">
         {% csrf_token %}
-        <label for="label">Title: </label>
-        <input type="text" value={{title}} id="label">
-        <br></br>
-
-        <label for="content">Content:</label>
-
-        <textarea id="content" rows="4" cols="50" style='height: 250px;' name="body">
-            {{ body }}
-        </textarea>
-
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Title: </label>
+                </td>
+                <td>
+                    <input type="text" value={{title}} id="name" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="content">Content: </label>
+                </td>
+                <td>
+                    <textarea id="content" rows="4" cols="50" style='height: 250px;' name="body" >
+                        {{body}}
+                    </textarea>
+                </td>
+            </tr>
+        </table>
         <input type="submit" value="save">
     </form>
-{% endblock %}96u42w2
+
+{% endblock %}

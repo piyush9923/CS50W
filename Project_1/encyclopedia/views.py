@@ -4,7 +4,7 @@ from django import forms
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 from . import util
 import markdown2
@@ -53,16 +53,12 @@ def create(request):
             title = form.cleaned_data['title']
             content = form.cleaned_data['content']
             if title in util.list_entries():
-                return HttpResponse("Unable to Save! "+title+" already exists")
+                raise Http404("Unable to Save! "+title+" already exists") #HttpResponse("Unable to Save! "+title+" already exists")
             util.save_entry(title, content)
-            return render(request, "encyclopedia/create.html", {
-                "form": NewPage(),
-                'success': True
-            })
+            return HttpResponseRedirect(reverse("wikipedia:title", args=(title,)))
 
     return render(request, "encyclopedia/create.html", {
-        "form": NewPage(),
-        'success': False
+        "form": NewPage()
     })
 
 def random_page(request):
@@ -81,7 +77,7 @@ def edit(request, title):
             entry = request.POST.get('body').strip()
             if len(entry) > 10:
                 util.save_entry(title, entry)
-                return HttpResponseRedirect(reverse_lazy('load_page', args=[title]))
+                return HttpResponseRedirect(reverse("wikipedia:title", args=(title,)))
             else:
                 messages.error(request, f'New Entry Don\'t have enough characters!')
         return render(request, 'encyclopedia/edit.html', {'body': entry, 'title': title})
