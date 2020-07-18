@@ -6,7 +6,7 @@
 
 {% block body %}
     <a href="{% url 'wikipedia:edit' title %}">
-        <input type="button" value="Edit">
+        <input class="btn btn-primary" type="button" value="Edit">
     </a>
 
     {{text |safe}}

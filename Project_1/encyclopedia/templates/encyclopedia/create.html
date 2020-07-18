@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Create A New Page</h1>
-    <form action="{% url 'wikipedia:create' %}" method="post">
+    <h1 style='padding-left: 20px;'>Create A New Page</h1>
+    <form action="{% url 'wikipedia:create' %}" method="post" style='margin: 20px;'>
         {% csrf_token %}
         <table>
             {{ form.as_table }}
             <tr>
                 <td>&nbsp;</td>
-                <td><input type="submit" value="Save"></td>
+                <td><input class="btn btn-primary" type="submit" value="Save"></td>
             </tr>
         </table>
     </form>

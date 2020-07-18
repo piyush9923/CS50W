@@ -12,7 +12,7 @@ import markdown2
 
 class NewPage(forms.Form):
     title = forms.CharField(label='Title')
-    content = forms.CharField(label='Description', widget=forms.Textarea(attrs={'cols': '60', 'style': 'height: 250px;'}))
+    content = forms.CharField(label='Description', widget=forms.Textarea(attrs={'cols': '60', 'style': 'height: 350px;'}))
 
 
 def index(request):
