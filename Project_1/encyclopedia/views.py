@@ -41,7 +41,7 @@ def search(request):
                 "content": markdown2.markdown(util.get_entry(query)),
             })
         else:
-            final_list = [a for a in entry_list if query in a]
+            final_list = [a for a in entry_list if query.lower() in a.lower()]
             return render(request, "encyclopedia/index.html", {
                 "entries": final_list
             })
