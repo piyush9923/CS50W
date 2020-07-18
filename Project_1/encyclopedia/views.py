@@ -81,4 +81,5 @@ def edit(request, title):
             else:
                 messages.error(request, f'New Entry Don\'t have enough characters!')
         return render(request, 'encyclopedia/edit.html', {'body': entry, 'title': title})
-    raise Http404("Entry does not exist")
+    else:
+        raise Http404("Entry does not exist")
