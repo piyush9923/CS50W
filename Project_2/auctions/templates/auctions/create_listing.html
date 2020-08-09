@@ -2,35 +2,11 @@
 
 {% block body %}
     <h1>Create a New Listing</h1>
-    <form action="{url 'create_listing'}" method="post">
+    <form action="{% url 'create_listing' %}" method="post">
         {% csrf_token %}
         <table>
-            <tr>
-                <td><label for="title">Item Name: </label></td>
-                <td><input type="text" id="title"></td>
-            </tr>
-            <tr>
-                <td><label for="desc">Item Description: </label></td>
-                <td><textarea id="desc"></textarea></td>
-            </tr>
-            <tr>
-                <td><label for="bid">Bid: </label></td>
-                <td><input type="number" id="bid"></td>
-            </tr>
-            <tr>
-                <td><label for="image">Image: </label></td>
-                <td><input type="text" id="image"></td>
-            </tr>
-            <tr>
-                <td><label for="category">Category: </label></td>
-                <td>
-                    <select name="category" id="category">
-                        <option value="Mobile">Mobiles</option>
-                        <option value="Cloths">Cloths</option>
-                        <option value="Accessories">Accessories</option>
-                    </select>
-                </td>
-            </tr>
+            {{ form.as_table }}
         </table>
+        <input type="submit">
     </form>
 {% endblock %}
